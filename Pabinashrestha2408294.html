@@ -1,0 +1,93 @@
+<!-- Pabina Shrestha 2408294  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Pabinashrestha2408294.css">
+    <!-- title of the webpage -->
+    <title>silchar</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Search input field -->
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="true">
+            <button><i class="fas fa-search"></i></button> <!-- Updated font awesome class -->
+        </div>
+        
+        <!-- Weather information container -->
+        <div id="weather-container" class="weather-container"></div> <!-- Moved weather container here -->
+        <div class="weather">
+            <div class="weather-info">
+                <!-- Error message -->
+                <div class="error" id="error-message" style="display: none;">Invalid city. Please try again.</div>
+                <!-- Weather condition -->
+                <p class="condition"></p>
+                <img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon" class="weather-icon"> <!-- Weather icon -->
+                <h1 class="temp"></h1> <!-- Temperature -->
+                <h2 class="city"></h2> <!-- City name -->
+                <p id="dateContainer"></p> <!-- Date -->
+                <div class="line"></div><br>
+                <!-- Weather details -->
+                <div class="details">
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-tint"></i></div>
+                        <p class="humidity">Humidity</p> <!-- Humidity -->
+                    </div>
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-wind"></i></div>
+                        <p class="wind">Wind speed</p> <!-- Wind speed -->
+                        <p></p>
+                    </div>
+                    <div class="col">
+                        <div class="icon"><i class="far fa-clock"></i></div>
+                        <p class="pressure">Pressure</p> <!-- Pressure -->
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <!-- Forecast toggle button -->
+                <div class="forecast-toggle">
+                    <button id="showForecastBtn" class="past-button">Show Past 7 Days Forecast </button>
+                    <!-- Forecast container -->
+                    <div id="forecast-container" class="forecast-container" style="display: none;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Temperature</th>
+                                    <th>Humidity</th>
+                                    <th>Pressure</th>
+                                    <th>Description</th>
+                                    <th>Wind Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody id="forecast-table-body">
+                                <!-- Forecast data will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future forecast container --><p>future forecast</p>
+        <div id="future-forecast">
+            <div id="forecast-cards-container" class="forecast-cards-container">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>Copyright &copy; 2024 Pabina Shrestha 2408294</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="Pabinashrestha2408294.js"></script>
+</body>
+</html>

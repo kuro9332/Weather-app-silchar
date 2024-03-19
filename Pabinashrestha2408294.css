@@ -1,0 +1,253 @@
+/* Pabina Shrestha 2408294 */
+/* Reset and basic styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #95a2e4, #efd3a3);
+}
+
+.container {
+    max-width: 800px;
+    background: linear-gradient(135deg, #4762ec, #efc275);
+    color: #fff;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 30px 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Search */
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search input {
+    outline: 0;
+    color: #555;
+    padding: 10px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+.search input:hover,
+.search input:focus {
+    background-color: #d3d0d0;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #d3d0d0;
+}
+
+/* Styles for the future forecast container */
+#future-forecast {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px; /* Add padding to the future forecast container */
+    display:flex; /* Enable flexbox layout */
+}
+
+.forecast-cards-container {
+    display: flex;
+    overflow-x: auto; /* Add scrollbar for horizontal overflow */
+}
+
+.forecast-card {
+    width: 100px; /* Adjust the width of each forecast card */
+    margin-right: 10px; /* Add margin between forecast cards */
+    border: 2px solid #d7eae7;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Weather */
+.weather {
+    text-align: center;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+}
+
+/* Forecast Table */
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+    
+}
+
+.forecast-table th,
+.forecast-table td {
+    padding: 10px;
+}
+
+.forecast-table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.forecast-table tbody tr:nth-child(even) {
+    background-color: #6775b8;
+}
+
+/* Condition */
+.condition {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Details */
+.details {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+
+/* Date Container */
+#dateContainer {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Line */
+.line {
+    border-bottom: 1px solid #fff;
+}
+
+/* Column */
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background: linear-gradient(135deg, #6c82f0, #f1d4a2);
+    box-shadow: 0 0 40px rgba(51, 50, 50, 0.5);
+    margin-bottom: 20px;
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Past Button */
+.past-button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #6c82f0, #f1d4a2);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.past-button:hover {
+    color: #555;
+    border-color: #6c82f0;
+}
+
+.past-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Error */
+.error {
+    display: block;
+    color: rgb(255, 0, 0);
+    font-size: larger;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: #ebfffc;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .container {
+        background: linear-gradient(135deg, #3b78e0, #bd7ce2);
+        max-width: 100%;
+        padding: 30px 10px;
+    }
+    body {
+        background: #8cace3;
+        background-size: cover;
+    }
+    .col {
+        background: linear-gradient(135deg, #3b78e0, #bd7ce2);
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+    .details .col {
+        margin-right: 0;
+    }
+    .forecast-table {
+        overflow-x: auto;}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+    .container {
+        background: linear-gradient(135deg, #e371f0, #71bfe9);
+        max-width: 700px;
+        padding: 30px 10px;
+    }
+    body {
+        background: #eeb1ee;
+        background-size: cover;
+    }
+    .col {
+        background: linear-gradient(135deg, #e371f0, #71bfe9);
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+}
